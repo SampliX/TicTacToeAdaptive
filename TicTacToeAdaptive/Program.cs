@@ -20,14 +20,14 @@ namespace TicTacToeAdaptive
             {
                 Console.WriteLine("\n" + $"Ход {player}-ого игрока. Выберите ячейку:");
                 tmp = int.Parse(Console.ReadLine()) - 1;
-                if (tmp >= 0 && tmp <= 8 && pole[tmp / 3, tmp % 3] == null)
+                if (tmp >= 0 && tmp <= 8 && pole[tmp / poleSize, tmp % poleSize] == null)
                 {
                     if (player == 1)
                         symbol = "X";
                     else
                         symbol = "0";
 
-                    pole[tmp / 3, tmp % 3] = symbol;
+                    pole[tmp / poleSize, tmp % poleSize] = symbol;
 
                     WritePole(pole);
 
